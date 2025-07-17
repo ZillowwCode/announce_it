@@ -1,0 +1,12 @@
+services:
+  announce_it.manager:
+    class: Drupal\announce_it\Service\AnnouncementManager
+    arguments: ['@entity_type.manager']
+    tags:
+      - { name: 'announcement.manager' }
+
+  announce_it.renderer:
+    class: Drupal\announce_it\Render\AnnouncementRenderer
+    arguments: ['@announce_it.manager']
+    tags:
+      - { name: 'announcement.renderer' }

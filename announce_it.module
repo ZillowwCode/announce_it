@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Announce It module hooks.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function announce_it_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.announce_it':
+      return '<p>' . \Drupal::translation()->translate('The Announce It module allows you to display announcements on your site.') . '</p>';
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function announce_it_page_attachments(array &$attachments) {
+  if (!\Drupal::service('router.admin_context')->isAdminRoute()) {
+    $attachments['#attached']['library'][] = 'announce_it/announce_it';
+  }
+}
+
+/**
+ * Implements hook_page_top().
+ */
+function announce_it_page_top(array &$page_top) {
+  if (!\Drupal::service('router.admin_context')->isAdminRoute()) {
+    $renderer = \Drupal::service('announce_it.renderer');
+    $page_top += $renderer->render();
+  }
+}
