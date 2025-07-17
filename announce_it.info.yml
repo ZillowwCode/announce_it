@@ -1,0 +1,8 @@
+name: Announce it!
+type: module
+description: 'Display customizable announcements anywhere on your Drupal 11 website with full control over display, behavior, and visibility without the need to place a single block.'
+core_version_requirement: ^11
+package: Custom
+dependencies:
+  - drupal:node
+license: GPL-2.0-or-later
