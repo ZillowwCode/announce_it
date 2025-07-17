@@ -1,1 +1,1 @@
-console.log("Announce It module loaded");
+(function(){document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".announce-close").forEach(function(n){n.addEventListener("click",function(){this.closest(".announce-it").classList.add("closed")})})})})();

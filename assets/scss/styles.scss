@@ -4,6 +4,29 @@
   background-color: var(--announcement-bg-color);
   color: var(--announcement-text-color);
 
+  &.closed {
+    display: none;
+  }
+
+  &.closable {
+    position: relative;
+
+    .announce-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--announcement-text-color);
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
   &.bar {
     width: 100%;
     text-align: center;

@@ -28,21 +28,40 @@ class AnnouncementRenderer implements AnnouncementRendererInterface {
       $position = $announcement->get('field_position')->value;
       $is_bar = in_array($position, ['top', 'bottom']);
       $css_class = $announcement->get('field_css_class')->value;
+      $is_closable = $announcement->get('field_closable')->value;
 
       $classes = ['announce-it'];
       $classes[] = $is_bar ? 'bar' : 'popup';
       $classes[] = $position;
       $classes[] = $css_class;
+      if ($is_closable) {
+        $classes[] = 'closable';
+      }
 
-      $output['announce_it_' . $announcement->id()] = [
+      $render_array = [
         '#type' => 'container',
         '#attributes' => [
           'class' => $classes,
+          'data-announcement-id' => $announcement->id(),
         ],
         'content' => [
           '#markup' => Markup::create($message),
         ],
       ];
+
+      if ($is_closable) {
+        $render_array['close_button'] = [
+          '#type' => 'html_tag',
+          '#tag' => 'button',
+          '#attributes' => [
+            'class' => ['announce-close'],
+            'aria-label' => t('Close'),
+          ],
+          '#value' => '×',
+        ];
+      }
+
+      $output['announce_it_' . $announcement->id()] = $render_array;
     }
 
     return $output;
