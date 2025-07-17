@@ -1,0 +1,8 @@
+announce_it:
+  css:
+    theme:
+      dist/announce_it.css: {}
+  js:
+    dist/announce_it.js: {}
+  dependencies:
+    - core/drupal

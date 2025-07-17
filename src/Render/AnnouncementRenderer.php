@@ -19,12 +19,18 @@ class AnnouncementRenderer implements AnnouncementRendererInterface {
     foreach ($this->manager->getVisibleAnnouncements() as $announcement) {
       $message = $announcement->get('field_message')->value;
       $position = $announcement->get('field_position')->value;
+      $is_bar = in_array($position, ['top', 'bottom']);
       $css_class = $announcement->get('field_css_class')->value;
+
+      $classes = ['announce-it'];
+      $classes[] = $is_bar ? 'bar' : 'popup';
+      $classes[] = $position;
+      $classes[] = $css_class;
 
       $output['announce_it_' . $announcement->id()] = [
         '#type' => 'container',
         '#attributes' => [
-          'class' => ['announce-it', $position, $css_class],
+          'class' => $classes,
         ],
         'content' => [
           '#markup' => Markup::create($message),
