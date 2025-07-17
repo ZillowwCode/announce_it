@@ -1,0 +1,7 @@
+entity.announce_it_announcement.settings:
+  path: 'admin/structure/announce-it-announcement'
+  defaults:
+    _form: '\Drupal\announce_it\Form\AnnouncementSettingsForm'
+    _title: 'Announcement'
+  requirements:
+    _permission: 'administer announce_it_announcement'

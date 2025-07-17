@@ -1,0 +1,11 @@
+entity.announce_it_announcement.settings:
+  title: 'Announcement'
+  description: 'Configure an Announcement entity type.'
+  route_name:  entity.announce_it_announcement.settings
+  parent: system.admin_structure
+
+entity.announce_it_announcement.collection:
+  title: 'Announcements'
+  description: 'List of announcements.'
+  route_name: entity.announce_it_announcement.collection
+  parent: system.admin_content

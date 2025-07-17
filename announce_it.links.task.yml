@@ -1,0 +1,9 @@
+entity.announce_it_announcement.settings:
+  title: 'Settings'
+  route_name: entity.announce_it_announcement.settings
+  base_route: entity.announce_it_announcement.settings
+entity.announce_it_announcement.collection:
+  title: 'Announcements'
+  route_name: entity.announce_it_announcement.collection
+  base_route: system.admin_content
+  weight: 10

@@ -1,0 +1,11 @@
+administer announce_it_announcement:
+  title: 'Administer announcements'
+  restrict access: true
+view announce_it_announcement:
+  title: 'View announcement'
+edit announce_it_announcement:
+  title: 'Edit announcement'
+delete announce_it_announcement:
+  title: 'Delete announcement'
+create announce_it_announcement:
+  title: 'Create announcement'
