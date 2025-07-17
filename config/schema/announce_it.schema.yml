@@ -1,0 +1,16 @@
+announce_it.settings:
+  type: config_object
+  label: 'Announce It global settings'
+  mapping:
+    background_color:
+      type: string
+      label: 'Background color'
+    text_color:
+      type: string
+      label: 'Text color'
+    padding_y:
+      type: string
+      label: 'Vertical padding'
+    padding_x:
+      type: string
+      label: 'Horizontal padding'

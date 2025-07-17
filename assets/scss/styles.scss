@@ -1,9 +1,9 @@
 .announce-it {
   &.bar {
     width: 100%;
-    padding: 30px;
-    color: #fff;
-    background-color: #000;
+    padding: var(--announcement-padding-y) var(--announcement-padding-x);
+    background-color: var(--announcement-bg-color);
+    color: var(--announcement-text-color);
     text-align: center;
   }
 

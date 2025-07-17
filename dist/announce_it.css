@@ -1,1 +1,1 @@
-.announce-it.bar{width:100%;padding:30px;color:#fff;background-color:#000;text-align:center}.announce-it.top{position:relative;top:0}.announce-it.bottom{position:fixed;bottom:0;left:0;right:0}
+.announce-it.bar{width:100%;padding:var(--announcement-padding-y) var(--announcement-padding-x);background-color:var(--announcement-bg-color);color:var(--announcement-text-color);text-align:center}.announce-it.top{position:relative;top:0}.announce-it.bottom{position:fixed;bottom:0;left:0;right:0}

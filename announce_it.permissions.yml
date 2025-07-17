@@ -1,4 +1,4 @@
-administer announce_it_announcement:
+administer announce_it:
   title: 'Administer announcements'
   restrict access: true
 view announce_it_announcement:

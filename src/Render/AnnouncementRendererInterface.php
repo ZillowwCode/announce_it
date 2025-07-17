@@ -11,4 +11,12 @@ interface AnnouncementRendererInterface {
    *  A renderable array.
    */
   public function render(): array;
+
+  /**
+   * Injects dynamic CSS variables for announcements styling from the configuration form.
+   *
+   * @param array $attachments
+   *  The render attachments array to which CSS variables will be added.
+   */
+  public function attachCssVariables(array &$attachments): void;
 }

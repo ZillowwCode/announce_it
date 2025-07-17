@@ -23,6 +23,7 @@ function announce_it_help($route_name, RouteMatchInterface $route_match) {
 function announce_it_page_attachments(array &$attachments) {
   if (!\Drupal::service('router.admin_context')->isAdminRoute()) {
     $attachments['#attached']['library'][] = 'announce_it/announce_it';
+    \Drupal::service('announce_it.renderer')->attachCssVariables($attachments);
   }
 }
 

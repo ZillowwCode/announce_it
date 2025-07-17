@@ -4,4 +4,12 @@ entity.announce_it_announcement.settings:
     _form: '\Drupal\announce_it\Form\AnnouncementSettingsForm'
     _title: 'Announcement'
   requirements:
-    _permission: 'administer announce_it_announcement'
+    _permission: 'administer announce_it'
+
+announce_it.settings:
+  path: 'admin/config/announce-it'
+  defaults:
+    _form: '\Drupal\announce_it\Form\AnnounceItSettingsForm'
+    _title: 'Announce It! Settings'
+  requirements:
+    _permission: 'administer announce_it'

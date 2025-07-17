@@ -7,6 +7,6 @@ services:
 
   announce_it.renderer:
     class: Drupal\announce_it\Render\AnnouncementRenderer
-    arguments: ['@announce_it.manager']
+    arguments: ['@announce_it.manager', '@config.factory']
     tags:
       - { name: 'announcement.renderer' }

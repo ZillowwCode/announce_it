@@ -9,3 +9,16 @@ entity.announce_it_announcement.collection:
   description: 'List of announcements.'
   route_name: entity.announce_it_announcement.collection
   parent: system.admin_content
+
+announce_it.admin_config:
+  title: 'Announce It!'
+  description: 'Settings for the Announce It! module'
+  route_name: announce_it.settings
+  parent: system.admin_config
+  weight: 100
+announce_it.settings:
+  title: 'Announce It! Settings'
+  description: 'Configure the Announce It! module settings.'
+  route_name: announce_it.settings
+  parent: announce_it.admin_config
+  weight: 0
