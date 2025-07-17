@@ -1,21 +1,55 @@
 .announce-it {
+  box-sizing: border-box;
+  padding: var(--announcement-padding-y) var(--announcement-padding-x);
+  background-color: var(--announcement-bg-color);
+  color: var(--announcement-text-color);
+
   &.bar {
     width: 100%;
-    padding: var(--announcement-padding-y) var(--announcement-padding-x);
-    background-color: var(--announcement-bg-color);
-    color: var(--announcement-text-color);
     text-align: center;
+    z-index: 1000;
+
+    &.top {
+      position: relative;
+      top: 0;
+    }
+
+    &.bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
 
-  &.top {
-    position: relative;
-    top: 0;
-  }
-
-  &.bottom {
+  &.popup {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    max-width: 60vw;
+    border-radius: 5px;
+    border: 1px solid var(--announcement-border-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+
+    &.center {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &.top_left {
+      top: 20px;
+      left: 20px;
+    }
+    &.top_right {
+      top: 20px;
+      right: 20px;
+    }
+    &.bottom_left {
+      bottom: 20px;
+      left: 20px;
+    }
+    &.bottom_right {
+      bottom: 20px;
+      right: 20px;
+    }
   }
 }

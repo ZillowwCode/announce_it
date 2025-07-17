@@ -43,6 +43,13 @@ class AnnounceItSettingsForm extends ConfigFormBase {
       '#default_value' => $config->get('text_color'),
     ];
 
+    $form['border_color'] = [
+      '#type' => 'color',
+      '#title' => $this->t('Border color'),
+      '#description' => $this->t('This color will be used for the border of pop-up announcements.'),
+      '#default_value' => $config->get('border_color'),
+    ];
+
     $form['padding_y'] = [
       '#type' => 'number',
       '#title' => $this->t('Vertical padding'),
@@ -69,6 +76,7 @@ class AnnounceItSettingsForm extends ConfigFormBase {
     $this->configFactory()->getEditable('announce_it.settings')
       ->set('background_color', $form_state->getValue('background_color'))
       ->set('text_color', $form_state->getValue('text_color'))
+      ->set('border_color', $form_state->getValue('border_color'))
       ->set('padding_y', $form_state->getValue('padding_y'))
       ->set('padding_x', $form_state->getValue('padding_x'))
       ->save();

@@ -57,11 +57,13 @@ class AnnouncementRenderer implements AnnouncementRendererInterface {
     $css = sprintf(':root {
       --announcement-bg-color: %s;
       --announcement-text-color: %s;
+      --announcement-border-color: %s;
       --announcement-padding-y: %spx;
       --announcement-padding-x: %spx;
     }',
       $config->get('background_color'),
       $config->get('text_color'),
+      $config->get('border_color'),
       $config->get('padding_y'),
       $config->get('padding_x')
     );
