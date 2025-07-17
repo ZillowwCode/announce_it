@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - announce_it
+  enforced:
+    module:
+      - announce_it
 id: announce_it_announcement_save_action
 label: 'Save announcements'
 type: announce_it_announcement

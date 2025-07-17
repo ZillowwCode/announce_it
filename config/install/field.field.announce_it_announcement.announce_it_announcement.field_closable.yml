@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.announce_it_announcement.field_closable
+  module:
+    - announce_it
+  enforced:
+    module:
+      - announce_it
+id: announce_it_announcement.announce_it_announcement.field_closable
+field_name: field_closable
+entity_type: announce_it_announcement
+bundle: announce_it_announcement
+label: Closable
+description: 'If enabled, users will be able to close the announcement.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

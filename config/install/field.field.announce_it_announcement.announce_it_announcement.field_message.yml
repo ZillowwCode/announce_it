@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.announce_it_announcement.field_message
+  module:
+    - announce_it
+    - text
+  enforced:
+    module:
+      - announce_it
+id: announce_it_announcement.announce_it_announcement.field_message
+field_name: field_message
+entity_type: announce_it_announcement
+bundle: announce_it_announcement
+label: Message
+description: 'The message content to be displayed on the site. Supports formatted text.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

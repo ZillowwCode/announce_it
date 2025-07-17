@@ -1,0 +1,22 @@
+uuid: e51201a3-7517-470c-a284-09a00cff665c
+langcode: en
+status: true
+dependencies:
+  module:
+    - announce_it
+    - text
+  enforced:
+    module:
+      - announce_it
+id: announce_it_announcement.field_message
+field_name: field_message
+entity_type: announce_it_announcement
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

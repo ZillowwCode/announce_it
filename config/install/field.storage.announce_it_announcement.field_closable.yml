@@ -1,0 +1,18 @@
+uuid: 7780f749-327c-40ba-80b9-4ac3a37753fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - announce_it
+id: announce_it_announcement.field_closable
+field_name: field_closable
+entity_type: announce_it_announcement
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

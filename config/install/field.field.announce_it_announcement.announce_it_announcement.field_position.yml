@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.announce_it_announcement.field_position
+  module:
+    - announce_it
+    - options
+  enforced:
+    module:
+      - announce_it
+id: announce_it_announcement.announce_it_announcement.field_position
+field_name: field_position
+entity_type: announce_it_announcement
+bundle: announce_it_announcement
+label: Position
+description: 'Choose where the announcement should appear on the screen.'
+required: true
+translatable: false
+default_value:
+  -
+    value: top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.announce_it_announcement.field_css_class
+  module:
+    - announce_it
+  enforced:
+    module:
+      - announce_it
+id: announce_it_announcement.announce_it_announcement.field_css_class
+field_name: field_css_class
+entity_type: announce_it_announcement
+bundle: announce_it_announcement
+label: 'CSS Class'
+description: 'Optional CSS classes to apply for custom styling. Example: alert-info, my-banner.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

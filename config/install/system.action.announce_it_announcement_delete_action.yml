@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - announce_it
+  enforced:
+    module:
+      - announce_it
 id: announce_it_announcement_delete_action
 label: 'Delete announcements'
 type: announce_it_announcement

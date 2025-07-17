@@ -1,0 +1,45 @@
+uuid: 28d8bed8-427f-4ffd-aa36-f38f70eb43a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - announce_it
+    - options
+  enforced:
+    module:
+      - announce_it
+id: announce_it_announcement.field_position
+field_name: field_position
+entity_type: announce_it_announcement
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: top
+      label: Top
+    -
+      value: bottom
+      label: Bottom
+    -
+      value: top_left
+      label: 'Top left'
+    -
+      value: top_right
+      label: 'Top right'
+    -
+      value: bottom_left
+      label: 'Bottom left'
+    -
+      value: bottom_right
+      label: 'Bottom right'
+    -
+      value: center
+      label: Center
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
